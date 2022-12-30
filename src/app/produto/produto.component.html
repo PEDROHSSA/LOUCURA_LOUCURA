@@ -1,0 +1,29 @@
+<div >           
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Imagem</th>
+          <th>Estoque</th>
+          <th>Adicionar ao Carrinho</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <td>{{ produtos.id }}</td>
+          <td>{{ produtos.nome }}</td>
+          <td>{{ produtos.descricao }}</td>
+          <td>R$ {{ produtos.preco }}</td>
+          <td> <img src={{produtos.imagem}} alt=""> </td> 
+          <td>{{ produtos.estoque }}</td>
+          <td><button type="button" class="btn btn-primary" (click)="adicionaraoCarrinho(produtos)">Adicionar</button></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+
